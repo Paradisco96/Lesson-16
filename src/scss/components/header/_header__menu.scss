@@ -1,0 +1,19 @@
+@use "../../abstracts" as *;
+
+.header__menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding: $gap 0;
+
+  &-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: $gap;
+    align-items: center;
+
+      @extend %container;
+  }
+}

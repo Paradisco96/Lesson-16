@@ -1,0 +1,17 @@
+@use "../../abstracts" as *;
+
+.header__logo {
+  &-link {
+    display: block;
+    letter-spacing: 0.23em;
+    font-size: 1.5rem;
+  }
+  &-element {
+    display: inline-block;
+    padding: 11px 0 16px 4px;
+    border: 3px solid $color-highlight;
+  }
+  &-element2 {
+    margin-left: 5px;
+  }
+}
