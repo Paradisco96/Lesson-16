@@ -1,0 +1,40 @@
+@use "../abstracts" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+  font-style: $font-size;
+  font-family: $font-main;
+}
+
+body {
+  background-color: $color-white;
+  color: $color-gray;
+}
+
+h1 {
+  font-family: $font-header;
+  font-weight: 300;
+  font-size: 3.75rem;
+  letter-spacing: 0.0795em;
+  line-height: 1.2;
+}
+
+h2 {
+  font-family: $font-header;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  color: $color-primary;
+}
+
+a {
+color: $color-white;
+text-decoration: none;
+}
