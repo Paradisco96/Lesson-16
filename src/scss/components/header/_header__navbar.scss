@@ -2,7 +2,6 @@
 
 .header__navbar {
   &-list {
-    @include unlist(0 (-$gap-sm) 0 0);
     display: grid;
     grid-template-columns: repeat(
       auto-fit,
@@ -10,6 +9,11 @@
     ); //auto-fit for infinit quantity of columns, max-content - size by content without transfer//
     gap: $gap; // it's small 'cause we will add margin & padding
     justify-content: end;
+
+     @include unlist(0 (-$gap-sm) 0 0);
+     @include md {
+      display: none;
+     }
   }
 
   &-link {
