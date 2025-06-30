@@ -1,26 +1,43 @@
 @use "../abstracts" as *;
 
 .btn {
-min-height: 60px;
-min-width: 250px;
 padding: 0.5em 1em;
 display: flex;
 align-items: center;
 justify-content: center;
 border: solid $color-white 2px;
-
 border-style: solid;
-border-color: $color-white;
 border-width: 2px;
 letter-spacing: 0.1em;
-font-size: 1.12rem;
-
-background-color: rgba($color-white, 0.1);
-
 transition: background-color 0.3s;
 
 &:hover,
-&:focus{
+&:focus {
   background-color: $color-accent;
+}
+
+&--light {
+border-color: $color-white;
+background-color: rgba($color-white, 0.1);
+
+@include lg-min {
+font-size: 1.12rem;
+min-height: 60px;
+min-width: 250px;
+  }
+@include lg-md {
+min-height: 50px;
+min-width: 200px;
+} 
+@include md {
+min-height: 40px;
+min-width: 170px;
+} 
+}
+
+
+&--primary {
+  font-size: 1.12rem;
+
 }
 }
