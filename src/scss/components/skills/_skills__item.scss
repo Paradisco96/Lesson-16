@@ -16,7 +16,7 @@
     letter-spacing: 0.1em;
 
     font-family: $font-main;
-    font-style: 1.25rem;
+    font-size: 1.25rem;
 
     @include abs-position;
     @include md-min {
