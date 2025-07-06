@@ -8,48 +8,65 @@
 
 html {
   overflow-y: scroll;
-  font-style: $font-size;
+
   font-family: $font-main;
+  font-style: $font-size;
 }
 
 body {
-  background-color: $color-white;
   color: $color-gray;
+  background-color: $color-white;
 }
 
 h1 {
-  font-family: $font-header;
-  font-weight: 300;
-  font-size: 3.75rem;
   letter-spacing: 0.0795em;
+
+  font-family: $font-header;
+  font-size: 3.75rem;
+  font-weight: 300;
   line-height: 1.2;
 
-@include lg-min {
-   font-size: 3.75rem;
-}  
-@include lg-md {
-  font-size: 2.5rem;
-}
-@include md {
-  font-size: 1.875rem;
-
-}
+  @include lg-min {
+    font-size: 3.75rem;
+  }
+  @include lg-md {
+    font-size: 2.5rem;
+  }
+  @include md {
+    font-size: 1.875rem;
+  }
 }
 
 h2 {
+  margin: 0 0 1.25em;
+
+  letter-spacing: 0.1em;
+
+  color: $color-primary;
+
   font-family: $font-header;
   font-weight: 700;
-  font-size: 2.5rem;
   line-height: 1.2;
-  letter-spacing: 0.1em;
-  color: $color-primary;
+
+  @include lg-min {
+    font-size: 2.5rem;
+  }
+  @include lg-md {
+    font-size: 2rem;
+  }
+  @include md {
+    font-size: 1.5rem;
+  }
+  @include sm {
+    text-align: center;
+  }
 }
 
-h3{
+h3 {
   font-family: $font-header;
-
 }
 a {
-color: $color-white;
-text-decoration: none;
+  text-decoration: none;
+
+  color: $color-white;
 }
