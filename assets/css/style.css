@@ -163,7 +163,7 @@ template{
   border:2px solid transparent;
   border-bottom:2px solid rgba(255, 255, 255, 0.5);
   background-color:rgba(255, 255, 255, 0.05);
-  font-style:1.125rem;
+  font-size:1.125rem;
   letter-spacing:0.1em;
   -webkit-transition:0.3s;
   transition:0.3s;
@@ -182,7 +182,7 @@ template{
 html{
   overflow-y:scroll;
   font-family:"Roboto", sans-serif;
-  font-style:16px;
+  font-size:16px;
 }
 
 body{
@@ -441,7 +441,7 @@ a{
   margin:0;
   letter-spacing:0.1em;
   font-family:"Roboto", sans-serif;
-  font-style:1.25rem;
+  font-size:1.25rem;
   position:absolute;
   top:0;
   right:0;
