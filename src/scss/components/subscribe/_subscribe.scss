@@ -1,1 +1,59 @@
 @use "../../abstracts" as *;
+
+.subscribe {
+  padding-top: $gap-lg;
+  padding-bottom: $gap-lg;
+  background-color: $color-primary;
+
+  &__container {
+    @extend %container;
+  }
+  &__form {
+    display: grid;
+    gap: $gap;
+
+    @include md-min {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    @include md-sm {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &-group {
+      @include md-sm {
+        &:first-of-type {
+          grid-column: 1 / 3;
+          grid-row: 1;
+        }
+      }
+    }
+  }
+  &__input {
+    color: $color-white;
+    display: flex;
+    align-items: center;
+    @extend %form-element;
+
+    &:hover,
+    &:focus {
+      border-color: $color-white;
+      background-color: rgba($color-white, 0.1);
+      &::placeholder {
+        color: $color-white;
+      }
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+    color: rgba($color-white, 0.5);
+    @extend %form-element;
+
+    &:hover,
+    &:focus {
+      color: $color-white;
+      border-color: $color-white;
+      background-color: $color-accent;
+    }
+  }
+}
