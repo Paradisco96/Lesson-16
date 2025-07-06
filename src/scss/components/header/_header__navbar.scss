@@ -3,35 +3,42 @@
 .header__navbar {
   &-list {
     display: grid;
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(30px, max-content)
-    ); //auto-fit for infinit quantity of columns, max-content - size by content without transfer//
     gap: $gap; // it's small 'cause we will add margin & padding
     justify-content: end;
+
+    grid-template-columns: repeat(
+    auto-fit,
+    minmax(30px, max-content)
+    ); //auto-fit for infinit quantity of columns, max-content - size by content without transfer//
     @include md-min {
       @include unlist(0 (-$gap-sm) 0 0);
     }
-
     @include md {
       position: absolute;
       top: 100%;
       right: $gap;
+
       display: none;
-      text-align: right;
       overflow: hidden; //glassmorphism
+
+      text-align: right;
+
       @include box-shadow;
       @include unlist;
 
-      &::before {   //glassmorphism
+      &::before {
+        //glassmorphism
         position: absolute;
         z-index: -1;
         top: -$gap;
         right: -$gap;
         bottom: -$gap;
         left: -$gap;
+
         content: "";
+
         background-color: rgba($color-gray-dark, 0.3);
+
         backdrop-filter: blur(3px);
       }
     }
@@ -53,9 +60,11 @@
   &-link {
     display: block;
 
-    letter-spacing: 0.084em;
-    font-size: 1.125rem;
     transition: color, 0.3s;
+    letter-spacing: 0.084em;
+
+    font-size: 1.125rem;
+
     @include md-min {
       padding: $gap $gap-sm;
     }
@@ -71,12 +80,15 @@
 
   &-btn {
     position: relative;
-    border: none;
-    background: transparent;
+
+    display: block;
+
     width: 24px;
     height: 15.6px;
-    display: block;
     margin-left: auto;
+
+    border: none;
+    background: transparent;
 
     @include md-min {
       display: none;
@@ -84,34 +96,44 @@
 
     &::before,
     &::after {
-      content: "";
-      left: 0;
       position: absolute;
+      left: 0;
+
       display: block;
+
       width: 100%;
       height: 2.4px;
+
+      content: "";
+
       border-radius: 6px;
       background: $color-white;
     }
     &::before {
       top: 0;
-      box-shadow: 0 6.6px 0 $color-white;
+
       transition: box-shadow 0.3s 0.15s, top 0.3s 0.15s, transform 0.3s;
+
+      box-shadow: 0 6.6px 0 $color-white;
     }
     &::after {
       bottom: 0;
+
       transition: bottom 0.3s 0.15s, transform 0.3s;
     }
     &.active::before {
       top: 6.6px;
-      transform: rotate(45deg);
-      box-shadow: 0 3.6px 0 rgba(0, 0, 0, 0);
+
       transition: box-shadow 0.15s, top 0.3s, transform 0.3s 0.15s;
+      transform: rotate(45deg);
+
+      box-shadow: 0 3.6px 0 rgba(0, 0, 0, 0);
     }
     &.active::after {
       bottom: 6.6px;
-      transform: rotate(-45deg);
+
       transition: bottom 0.3s, transform 0.3s 0.15s;
+      transform: rotate(-45deg);
     }
   }
 }
