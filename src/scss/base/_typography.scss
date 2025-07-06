@@ -64,9 +64,10 @@ h2 {
 
 h3 {
   font-family: $font-header;
+  letter-spacing: 0.05em;
+  font-size: 1.125rem;
 }
 a {
   text-decoration: none;
-
   color: $color-white;
 }
