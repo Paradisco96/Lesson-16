@@ -577,6 +577,21 @@ a{
       -ms-flex-align:center;
           align-items:center;
 }
+.subscribe__input::-webkit-input-placeholder{
+  color:rgba(255, 255, 255, 0.5);
+}
+.subscribe__input::-moz-placeholder{
+  color:rgba(255, 255, 255, 0.5);
+}
+.subscribe__input:-ms-input-placeholder{
+  color:rgba(255, 255, 255, 0.5);
+}
+.subscribe__input::-ms-input-placeholder{
+  color:rgba(255, 255, 255, 0.5);
+}
+.subscribe__input::placeholder{
+  color:rgba(255, 255, 255, 0.5);
+}
 .subscribe__input:hover, .subscribe__input:focus{
   border-color:#ffffff;
   background-color:rgba(255, 255, 255, 0.1);
@@ -743,9 +758,6 @@ a{
   .about__container{
     gap:40px;
     grid-template-columns:1fr 175px;
-  }
-  .about__discription::before{
-    right:-24px;
   }
   .subscribe__form{
     grid-template-columns:1fr 1fr;
@@ -914,6 +926,9 @@ a{
   }
   .skills__item-title{
     font-size:1.125rem;
+  }
+  .about__discription::before{
+    right:-24px;
   }
 }
 @media (width < 576px){

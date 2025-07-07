@@ -60,9 +60,12 @@
       @include lg-md {
         right: -1.6 * $gap;
       }
-      @include md-sm {
+      @include md {
         right: -1.2 * $gap;
       }
+      // @include sm {
+      //   display: none;
+      // }
     }
   }
 
